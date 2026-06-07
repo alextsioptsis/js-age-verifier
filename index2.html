@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <title>Άσκηση 2</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; }
+        input, button { padding: 8px; margin: 5px; }
+        #result { font-weight: bold; }
+        body {background-color: aquamarine;}
+    </style>
+</head>
+<body>
+
+    <input type="number" id="age" placeholder="Εισάγετε ηλικία">
+    <button onclick="checkAge()">Έλεγχος Ηλικίας</button>
+
+    <p id="result"></p>
+
+    <script>
+        function checkAge() {
+            let userAge = parseInt(document.getElementById("age").value);
+            
+            if (userAge >= 18) {
+                document.getElementById("result").innerHTML = "Adult";
+            } else {
+                document.getElementById("result").innerHTML = "Minor";
+            }
+        }
+    </script>
+</body>
+</html>
